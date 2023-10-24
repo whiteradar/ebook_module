@@ -31,7 +31,7 @@ public class MainController {
         return "Saved";
     }
 
-    @GetMapping(path="/all")
+    @GetMapping(path="/everything")
     public @ResponseBody Iterable<EBook> getAllEBooks() {
         // This returns a JSON or XML with the users
         return eBookRepository.findAll();
