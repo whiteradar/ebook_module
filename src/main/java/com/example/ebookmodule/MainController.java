@@ -46,6 +46,6 @@ public class MainController {
     @DeleteMapping(path="/{id}")
     public @ResponseBody void deleteByID(@PathVariable("id") Integer asin) {
         // This returns a JSON or XML with the users
-        return eBookRepository.deleteById(asin);
+        eBookRepository.deleteById(asin);
     }
 }
