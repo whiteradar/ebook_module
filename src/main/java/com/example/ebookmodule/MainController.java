@@ -42,4 +42,10 @@ public class MainController {
         // This returns a JSON or XML with the users
         return eBookRepository.findById(asin);
     }
+
+    @DeleteMapping(path="/{id}")
+    public @ResponseBody void deleteByID(@PathVariable("id") Integer asin) {
+        // This returns a JSON or XML with the users
+        return eBookRepository.deleteById(asin);
+    }
 }
