@@ -56,6 +56,7 @@ public class EBookModuleApplicationTests {
 
 		Iterable<EBook> ebooks = eBookRepository.findAll();
 
+		
 		// You can use 'ebook' within this block.
 		// Assertions to check the result
 		assertNotNull(ebooks);
