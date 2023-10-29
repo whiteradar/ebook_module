@@ -18,6 +18,10 @@ public class EBook {
 
     private double price;
 
+
+    public EBook() {
+
+    }
     public EBook(Integer ASIN, String title, String author, double price) {
         this.ASIN = ASIN;
         this.title = title;
