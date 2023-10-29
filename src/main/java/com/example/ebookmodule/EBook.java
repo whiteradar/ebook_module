@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.lang.*;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class EBook {
@@ -13,9 +14,16 @@ public class EBook {
 
     private String title;
 
-    private String Author;
+    private String author;
 
     private double price;
+
+    public EBook(Integer ASIN, String title, String author, double price) {
+        this.ASIN = ASIN;
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
 
     public Integer getASIN() {
         return ASIN;
@@ -34,11 +42,11 @@ public class EBook {
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        this.author = author;
     }
 
     public double getPrice() {
