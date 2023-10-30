@@ -22,11 +22,7 @@ public class MainController {
     public @ResponseBody String addNewEBook (@RequestBody EBook ebook) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
-
-//        EBook ebook = new EBook();
-//        ebook.setTitle(title);
-//        ebook.setAuthor(author);
-//        ebook.setPrice(price);
+        
         eBookRepository.save(ebook);
         return "Saved";
     }
